@@ -2,12 +2,14 @@
   padding: 2em;
   margin: 0 auto;
   text-align: center;
-  box-shadow: var(--shadow);
+  color: var(--clr-bg);
+  background-color: var(--clr-fg);
+  /* box-shadow: var(--shadow);*/
   transition: transform 0.2s linear;
 }
 
 .project:hover {
-  transform: translateY(-7px);
+  /*transform: translateY(-7px);*/
 }
 
 .project__description {
@@ -19,15 +21,17 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 1.2em 0;
+  color: var(--clr-bg);
 }
 
 .project__stack-item {
   margin: 0.5em;
   font-weight: 500;
   font-size: 0.8rem;
-  color: var(--clr-fg-alt);
+  color: var(--clr-bg);
 }
 
 .project .link--icon {
   margin-left: 0.5em;
+  color: var(--clr-bg);
 }

@@ -1,11 +1,13 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
+import PlayCircleFilled from '@material-ui/icons/PlayCircleFilled'
 import './ProjectContainer.css'
 
-const ProjectContainer = ({ project }) => (
+function ProjectContainer ({ project }) {
+  return(
   <div className='project'>
-    <h3>{project.name}</h3>
+    <h5>{project.name}</h5>
 
     <p className='project__description'>{project.description}</p>
     {project.stack && (
@@ -28,6 +30,16 @@ const ProjectContainer = ({ project }) => (
       </a>
     )}
 
+    {project.videoLink && (
+      <a
+        href={project.videoLink}
+        aria-label='source code'
+        className='link link--icon link--text'
+      >
+        <PlayCircleFilled />
+      </a>
+    )}
+
     {project.livePreview && (
       <a
         href={project.livePreview}
@@ -38,6 +50,6 @@ const ProjectContainer = ({ project }) => (
       </a>
     )}
   </div>
-)
+)}
 
 export default ProjectContainer
